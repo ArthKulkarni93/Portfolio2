@@ -20,7 +20,17 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    // --- ADD THESE LINES FOR ALIASES ---
+    "baseUrl": ".", // This is crucial for resolving paths relative to the project root
+    "paths": {
+      // This sets up the @/ alias to point to your src directory
+      // If your main app code is NOT in 'src' (e.g., directly in the root), adjust "./src/*" accordingly.
+      // For most Vite projects, "./src/*" is correct.
+      "@/*": ["./src/*"]
+    }
+    // ------------------------------------
   },
   "include": ["src"]
 }
